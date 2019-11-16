@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="880.0" style="-fx-background-color: #FCFAEA;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GestaoPagamentoController">
+   <center>
+      <TableView fx:id="tvFuncionario" onKeyReleased="#selecionarFuncionario" onMouseClicked="#selecionarFuncionario" prefHeight="460.0" prefWidth="421.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></TableView>
+   </center>
+   <top>
+      <SplitPane prefHeight="40.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="btnPesquisar" minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="0.0">
+               <children>
+                  <TextField fx:id="tfPesquisarFuncionario" layoutX="162.0" layoutY="7.0" onKeyReleased="#updateTable" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="9.0" layoutY="11.0" text="Pesquise um funcionario:" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <right>
+      <Pane prefHeight="460.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="17.0" layoutY="140.0" text="Nome:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomeFuncionario" layoutX="222.0" layoutY="141.0" prefHeight="25.0" prefWidth="184.0" />
+            <TextField fx:id="tfEnderecoFuncionario" layoutX="222.0" layoutY="181.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="180.0" text="Endereço:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfTelefoneFuncionario" layoutX="222.0" layoutY="221.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="220.0" text="Telefone:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCpfFuncionario" layoutX="222.0" layoutY="261.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="260.0" text="CPF:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfValorPagar" layoutX="222.0" layoutY="302.0" prefHeight="25.0" prefWidth="184.0" />
+            <ImageView fx:id="ivLock" fitHeight="59.0" fitWidth="78.0" layoutX="27.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="17.0" layoutY="301.0" text="Valor a pagar:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

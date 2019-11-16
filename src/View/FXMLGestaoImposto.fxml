@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="294.0" prefWidth="600.0" style="-fx-background-color: FCFAEA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GestaoImpostoController">
+   <children>
+      <Label fx:id="lblTotaImposto" layoutX="50.0" layoutY="50.0" prefHeight="27.0" prefWidth="524.0" text="Este mês">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblImpostoFuncionario" layoutX="50.0" layoutY="107.0" prefHeight="27.0" prefWidth="524.0" text="Sendo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblImpostoVenda" layoutX="50.0" layoutY="161.0" prefHeight="27.0" prefWidth="524.0" text="e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

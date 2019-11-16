@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="511.0" style="-fx-background-color: #FCFAEA;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AdicionarProdutoController">
+   <top>
+      <SplitPane prefHeight="40.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="btnPesquisar" minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="0.0">
+               <children>
+                  <TextField fx:id="tfPesquisarProduto" layoutX="145.0" layoutY="7.0" onKeyReleased="#updateTable" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="9.0" layoutY="11.0" text="Pesquise um produto:" />
+                  <Button fx:id="btnSelecionarProduto" layoutX="358.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#selecionarProduto" text="Selecionar produto" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <center>
+      <TableView fx:id="tvProduto" prefHeight="380.0" prefWidth="529.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></TableView>
+   </center>
+</BorderPane>

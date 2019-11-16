@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="380.0" prefWidth="438.0" style="-fx-background-color: FCFAEA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastrarVendedorController">
+   <children>
+      <TextField fx:id="tfNomeVendedor" layoutX="230.0" layoutY="57.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfEnderecoVendedor" layoutX="230.0" layoutY="97.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfTelefoneVendedor" layoutX="230.0" layoutY="137.0" onKeyReleased="#limitaTelefone" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfCpfVendedor" layoutX="230.0" layoutY="177.0" onKeyReleased="#limitaCpf" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfSalarioBaseVendedor" layoutX="230.0" layoutY="217.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfMetaVendedor" layoutX="230.0" layoutY="257.0" prefHeight="25.0" prefWidth="184.0" />
+      <Button fx:id="btnCadastrar" layoutX="316.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnCadastrarVendedor" text="Cadastrar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="176.0" text="CPF:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="136.0" text="Telefone:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="96.0" text="Endereço:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="56.0" text="Nome:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="256.0" text="Meta de vendas:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="216.0" text="Salario base:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

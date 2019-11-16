@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="880.0" style="-fx-background-color: #FCFAEA;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GestaoProdutoController">
+   <center>
+      <TableView fx:id="tvProduto" onKeyReleased="#selecionarProduto" onMouseClicked="#selecionarProduto" prefHeight="460.0" prefWidth="421.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></TableView>
+   </center>
+   <top>
+      <SplitPane prefHeight="40.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="btnPesquisar" minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="0.0">
+               <children>
+                  <TextField fx:id="tfPesquisarProduto" layoutX="145.0" layoutY="7.0" onKeyReleased="#updateTable" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="9.0" layoutY="11.0" text="Pesquise um produto:" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <right>
+      <Pane prefHeight="460.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="17.0" layoutY="80.0" text="Nome do produto:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomeProduto" layoutX="222.0" layoutY="81.0" prefHeight="25.0" prefWidth="184.0" />
+            <TextField fx:id="tfApelidoProduto" layoutX="222.0" layoutY="121.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="120.0" text="Apelido:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCodigoProduto" layoutX="222.0" layoutY="161.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="160.0" text="Código:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfFornecedorProduto" layoutX="222.0" layoutY="201.0" onMouseClicked="#selecionarFornecedor" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="200.0" text="Fornecedor:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="357.0" text="Perecível:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="cbPerecivelProduto" layoutX="149.0" layoutY="362.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" />
+            <Button fx:id="btnEditar" layoutX="58.0" layoutY="397.0" mnemonicParsing="false" onAction="#editarProduto" text="Editar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvar" layoutX="334.0" layoutY="397.0" mnemonicParsing="false" onAction="#salvarProduto" text="Salvar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="ivLock" fitHeight="59.0" fitWidth="78.0" layoutX="27.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnCancelar" layoutX="142.0" layoutY="397.0" mnemonicParsing="false" onAction="#cancelarEdicaoProduto" text="Cancelar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="247.0" layoutY="397.0" mnemonicParsing="false" onAction="#excluirProduto" text="Excluir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="17.0" layoutY="240.0" text="Preço de custo:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfPrecoCusto" layoutX="222.0" layoutY="241.0" prefHeight="25.0" prefWidth="184.0" />
+            <TextField fx:id="tfPrecoFinal" layoutX="222.0" layoutY="281.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="280.0" text="Preço final:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="320.0" text="Validade (em dias):">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfValidadeEmDias" layoutX="222.0" layoutY="321.0" prefHeight="25.0" prefWidth="184.0" />
+            <Button fx:id="btnAddUnidade" layoutX="142.0" layoutY="457.0" mnemonicParsing="false" onAction="#adicionarUnidadeProduto" text="Adicionar unidade ao estoque">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

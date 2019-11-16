@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FCF4CE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.TelaInicioController">
+   <children>
+	   <HBox alignment="CENTER" layoutX="100.0" layoutY="73.0" prefHeight="370.0" prefWidth="600.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="73.0">
+	         <children>
+	            <ImageView fitHeight="455.0" fitWidth="655.0">
+	               <image>
+	                  <Image url="@../Img/BGPadaria.png" />
+	               </image>
+	               <HBox.margin>
+	                  <Insets />
+	               </HBox.margin>
+	            </ImageView>
+	         </children>
+	      </HBox>
+      
+      <MenuBar layoutX="81.0" layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <Menu mnemonicParsing="false" text="Vendas">
+              	<items>
+              		<MenuItem fx:id="btnNovaVenda" mnemonicParsing="false" onAction="#btnMenuNovaVenda" text="Nova Venda" />
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarVenda" text="Gestão de vendas" />
+              	</items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Produtos">
+              	<items>
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarProduto" text="Cadastrar produto" />
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarProduto" text="Gestão de produtos" />
+              	</items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Clientes">
+              	<items>
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarCliente" text="Cadastrar cliente" />
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarCliente" text="Gestão de clientes" />
+              	</items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Fornecedores">
+              	<items>
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarFornecedor" text="Cadastrar fornecedor" />
+              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarFornecedor" text="Gestão de fornecedores" />
+              	</items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Funcionarios">
+              	<items>
+              		<Menu mnemonicParsing="false" text="Vendedores">
+              			<items>
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarVendedor" text="Cadastrar vendedor" />
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarVendedor" text="Gestão de vendedores" />
+		              	</items>
+		            </Menu>
+              		<Menu mnemonicParsing="false" text="Gerentes">
+              			<items>
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarGerente" text="Cadastrar gerente" />
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarGerente" text="Gestão de gerentes" />
+		              	</items>
+		            </Menu>
+              		<Menu mnemonicParsing="false" text="Padeiros">
+              			<items>
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuCadastrarPadeiro" text="Cadastrar padeiro" />
+		              		<MenuItem mnemonicParsing="false" onAction="#btnMenuConsultarPadeiro" text="Gestão de padeiros" />
+		              	</items>
+		            </Menu>
+              	</items>
+              </Menu>
+                  <Menu mnemonicParsing="false" text="Financeiro">
+                     <items>
+                        <MenuItem fx:id="btPagamentoFuncionario" mnemonicParsing="false" onAction="#btnMenuGestaoPagamento" text="Pagamento de funcionarios" />
+                        <MenuItem fx:id="btImpostpsPagar" mnemonicParsing="false" onAction="#btnMenuGestaoImposto" text="Impostos a pagar" />
+                     </items>
+                  </Menu>
+              <MenuItem mnemonicParsing="false" onAction="#btnSair" text="Sair" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="btAbout" mnemonicParsing="false" onAction="#btnMenuAbout" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      
+   </children>
+</AnchorPane>

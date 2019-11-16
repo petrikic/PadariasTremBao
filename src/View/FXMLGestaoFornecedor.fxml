@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: #FCFAEA;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GestaoFornecedorController">
+   <center>
+      <TableView fx:id="tvFornecedor" onKeyReleased="#selecionarFornecedor" onMouseClicked="#selecionarFornecedor" prefHeight="460.0" prefWidth="421.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></TableView>
+   </center>
+   <top>
+      <SplitPane prefHeight="40.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane fx:id="btnPesquisar" minHeight="0.0" minWidth="0.0" prefHeight="38.0" prefWidth="0.0">
+               <children>
+                  <TextField fx:id="tfPesquisarFornecedor" layoutX="145.0" layoutY="7.0" onKeyReleased="#updateTable" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="9.0" layoutY="11.0" text="Pesquise um fornecedor:" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <right>
+      <Pane prefHeight="460.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="17.0" layoutY="85.0" text="Nome do fornecedor: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomeFornecedor" layoutX="222.0" layoutY="86.0" prefHeight="25.0" prefWidth="184.0" />
+            <TextField fx:id="tfEnderecoFornecedor" layoutX="222.0" layoutY="126.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="125.0" text="Endereço:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCnpjFornecedor" layoutX="222.0" layoutY="166.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="165.0" text="CNPJ:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfDescontoFornecedor" layoutX="222.0" layoutY="206.0" prefHeight="25.0" prefWidth="184.0" />
+            <Label layoutX="17.0" layoutY="205.0" text="Desconto (%):">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="245.0" text="Recorrente:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="cbRecorrenteFornecedor" layoutX="151.0" layoutY="250.0" mnemonicParsing="false" onAction="#editarDescontoFornecedor" prefHeight="17.0" prefWidth="0.0" />
+            <Button fx:id="btnEditar" layoutX="58.0" layoutY="342.0" mnemonicParsing="false" onAction="#editarFornecedor" text="Editar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvar" layoutX="334.0" layoutY="342.0" mnemonicParsing="false" onAction="#salvarFornecedor" text="Salvar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="ivLock" fitHeight="59.0" fitWidth="78.0" layoutX="27.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnCancelar" layoutX="142.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelarEdicaoFornecedor" text="Cancelar">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="247.0" layoutY="342.0" mnemonicParsing="false" onAction="#excluirFornecedor" text="Excluir">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" style="-fx-background-color: FCFAEA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.NovaVendaController">
+   <top>
+      <Pane prefHeight="132.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfNomeCliente" layoutX="135.0" layoutY="23.0" onMouseClicked="#selecionarCliente" />
+            <Label layoutX="38.0" layoutY="22.0" text="Cliente:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="59.0" text="Vendedor:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomeVendedor" layoutX="135.0" layoutY="60.0" onMouseClicked="#selecionarVendedor" />
+            <Label layoutX="313.0" layoutY="21.0" text="Pagamento">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="59.0" text="N° Parcelas:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="bntAddProduto" layoutX="38.0" layoutY="93.0" mnemonicParsing="false" onAction="#selecionarProduto" text="Adicionar produto" />
+            <ChoiceBox fx:id="chbFormaPagamento" layoutX="423.0" layoutY="22.0" onMouseDragged="#selecionaFormaPagamento" onMouseEntered="#selecionaFormaPagamento" onMouseExited="#selecionaFormaPagamento" prefHeight="25.0" prefWidth="72.0" />
+            <ChoiceBox fx:id="chbNumeroParcelas" layoutX="423.0" layoutY="60.0" onMouseDragged="#selecionaFormaPagamento" onMouseEntered="#selecionaFormaPagamento" onMouseExited="#selecionaFormaPagamento" prefHeight="25.0" prefWidth="72.0" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TableView fx:id="tvSacola" prefHeight="362.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <Pane prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="343.0" layoutY="6.0" text="Total da compra: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="481.0" layoutY="6.0" text="R$ ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnFinalizarVenda" layoutX="98.0" layoutY="5.0" mnemonicParsing="false" onAction="#finalizarVenda" text="Finalizar venda">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

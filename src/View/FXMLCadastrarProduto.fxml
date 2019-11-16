@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="430.0" prefWidth="438.0" style="-fx-background-color: FCFAEA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CadastrarProdutoController">
+   <children>
+      <TextField fx:id="tfNomeProduto" layoutX="232.0" layoutY="91.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfApelidoProduto" layoutX="232.0" layoutY="131.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfCodigoProduto" layoutX="232.0" layoutY="171.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfFornecedorProduto" layoutX="232.0" layoutY="211.0" onMouseClicked="#selecionarFornecedor" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfPrecoCusto" layoutX="232.0" layoutY="251.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="tfValidadeEmDias" layoutX="232.0" layoutY="293.0" prefHeight="25.0" prefWidth="184.0" />
+      <CheckBox fx:id="cbPerecivelProduto" layoutX="159.0" layoutY="334.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" />
+      <Label layoutX="27.0" layoutY="292.0" text="Validade (em dias):">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="250.0" text="Preço de custo:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCadastrar" layoutX="316.0" layoutY="367.0" mnemonicParsing="false" onAction="#salvarProduto" text="Cadastrar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="329.0" text="Perecível:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="210.0" text="Fornecedor:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="170.0" text="Código:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="130.0" text="Apelido:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="90.0" text="Nome do produto:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
